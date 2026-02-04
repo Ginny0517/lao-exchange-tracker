@@ -1,0 +1,102 @@
+{
+  "scrapedAt": "2026-02-03T05:44:33.380Z",
+  "totalRates": 8,
+  "rates": [
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "CNY/LAK",
+      "fromCurrency": "CNY",
+      "toCurrency": "LAK",
+      "buyPrice": 3062,
+      "sellPrice": 3085,
+      "spread": 23,
+      "timestamp": 1770097462239,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "EUR/LAK",
+      "fromCurrency": "EUR",
+      "toCurrency": "LAK",
+      "buyPrice": 25353,
+      "sellPrice": 25609,
+      "spread": 256,
+      "timestamp": 1770097462239,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "THB/LAK",
+      "fromCurrency": "THB",
+      "toCurrency": "LAK",
+      "buyPrice": 676.05,
+      "sellPrice": 687.07,
+      "spread": 11.020000000000095,
+      "timestamp": 1770097462239,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "USD/LAK",
+      "fromCurrency": "USD",
+      "toCurrency": "LAK",
+      "buyPrice": 21409,
+      "sellPrice": 21614,
+      "spread": 205,
+      "timestamp": 1770097462239,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BCEL",
+      "bankName": "BCEL",
+      "currencyPair": "USD/LAK",
+      "fromCurrency": "USD",
+      "toCurrency": "LAK",
+      "buyPrice": 21182,
+      "sellPrice": 21506,
+      "spread": 324,
+      "timestamp": 1770097470994,
+      "source": "https://www.bcel.com.la/bcel/exchange-rate.html"
+    },
+    {
+      "bankId": "BCEL",
+      "bankName": "BCEL",
+      "currencyPair": "THB/LAK",
+      "fromCurrency": "THB",
+      "toCurrency": "LAK",
+      "buyPrice": 675.19,
+      "sellPrice": 681.59,
+      "spread": 6.399999999999977,
+      "timestamp": 1770097470994,
+      "source": "https://www.bcel.com.la/bcel/exchange-rate.html"
+    },
+    {
+      "bankId": "BCEL",
+      "bankName": "BCEL",
+      "currencyPair": "EUR/LAK",
+      "fromCurrency": "EUR",
+      "toCurrency": "LAK",
+      "buyPrice": 24972,
+      "sellPrice": 25470,
+      "spread": 498,
+      "timestamp": 1770097470994,
+      "source": "https://www.bcel.com.la/bcel/exchange-rate.html"
+    },
+    {
+      "bankId": "BCEL",
+      "bankName": "BCEL",
+      "currencyPair": "CNY/LAK",
+      "fromCurrency": "CNY",
+      "toCurrency": "LAK",
+      "buyPrice": 3029,
+      "sellPrice": 3080,
+      "spread": 51,
+      "timestamp": 1770097470994,
+      "source": "https://www.bcel.com.la/bcel/exchange-rate.html"
+    }
+  ]
+}

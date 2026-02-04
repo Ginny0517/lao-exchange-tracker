@@ -1,0 +1,42 @@
+{
+  "testTime": "2026-02-03T11:32:55.228Z",
+  "results": [
+    {
+      "bank": "BOL",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 9255
+    },
+    {
+      "bank": "BCEL",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 12973
+    },
+    {
+      "bank": "LDB",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 52043
+    },
+    {
+      "bank": "APB",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 155596
+    },
+    {
+      "bank": "JDB",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 31873
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "success": 5,
+    "failed": 0,
+    "totalRates": 20,
+    "totalDuration": 261740
+  }
+}

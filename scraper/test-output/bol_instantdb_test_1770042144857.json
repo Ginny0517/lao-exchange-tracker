@@ -1,0 +1,54 @@
+{
+  "scrapedAt": "2026-02-02T14:22:24.860Z",
+  "totalRates": 4,
+  "rates": [
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "CNY/LAK",
+      "fromCurrency": "CNY",
+      "toCurrency": "LAK",
+      "buyPrice": 3059,
+      "sellPrice": 3082,
+      "spread": 23,
+      "timestamp": 1770042143853,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "EUR/LAK",
+      "fromCurrency": "EUR",
+      "toCurrency": "LAK",
+      "buyPrice": 25465,
+      "sellPrice": 25722,
+      "spread": 257,
+      "timestamp": 1770042143853,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "THB/LAK",
+      "fromCurrency": "THB",
+      "toCurrency": "LAK",
+      "buyPrice": 675.85,
+      "sellPrice": 686.87,
+      "spread": 11.019999999999982,
+      "timestamp": 1770042143853,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    },
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "USD/LAK",
+      "fromCurrency": "USD",
+      "toCurrency": "LAK",
+      "buyPrice": 21409,
+      "sellPrice": 21611,
+      "spread": 202,
+      "timestamp": 1770042143853,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    }
+  ]
+}

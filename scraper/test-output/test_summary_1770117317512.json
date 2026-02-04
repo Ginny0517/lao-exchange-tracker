@@ -1,0 +1,43 @@
+{
+  "testTime": "2026-02-03T11:15:17.503Z",
+  "results": [
+    {
+      "bank": "BOL",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 10769
+    },
+    {
+      "bank": "BCEL",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 7923
+    },
+    {
+      "bank": "LDB",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 18006
+    },
+    {
+      "bank": "APB",
+      "success": true,
+      "ratesCount": 4,
+      "duration": 18617
+    },
+    {
+      "bank": "JDB",
+      "success": false,
+      "ratesCount": 0,
+      "error": "無法找到匯率表格",
+      "duration": 95254
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "success": 4,
+    "failed": 1,
+    "totalRates": 16,
+    "totalDuration": 150569
+  }
+}

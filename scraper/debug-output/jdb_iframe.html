@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>JDB Exchange Rate All</title>
+	<meta name="description" content="JDB Exchange Rate All">
+	<meta name="keywords" content="JDB Exchange Rate All">
+	<meta name="author" content="LaoITDEV">
+
+	<!--[if IE]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://www.eyecon.ro/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+	<script src="js/jquery.stickyheader.js"></script>
+
+	<link href="https://www.eyecon.ro/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://demo.laoitdev.com/jdb/wp-content/themes/jdb_v1.0/asset/css/fonts.css?v=20190116043619">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css">
+		
+	</head>
+	<body>
+		<div class="container">
+
+		<header>
+		<span style="font-size: 23px; font-family: 'NotoSansLao-Light', 'NotoSansLao-Light'; color:#003366; font-weight: bold">ອັດຕາແລກປ່ຽນປະຈຳ ວັນທີ: 2026-02-03 08:47:25</span>
+		<form id="exchange-form" action="exchange_all.php" method="post">
+		<div class="form-group" style="font-size: 17px; font-family: 'NotoSansLao-Light', 'NotoSansLao-Light';">
+		ວັນທີ : 
+		<input id="datepicker" value="" name="datepick" width="250"> 
+		<button type="submit" class="btn active btn-primary btn-sm">Search</button> 
+		</div>
+		</form>
+           
+		<script>
+			$('#datepicker').datepicker({ format: 'yyyy-mm-dd' });
+		</script>
+		</header>
+		
+		
+		<div class="component">
+			<div class="sticky-wrap"><table class="sticky-enabled" style="margin: 0px; width: 100%;">
+				<thead>
+				<tr>
+					<th rowspan="2">CURRENCY/KIP</th>
+					<th colspan="2">BUYING RATES</th>
+					<th colspan="2">SELLING RATES</th>
+
+				</tr>
+				<tr>
+					<th><span><b>Bank Note</b></span></th>
+					<th><span><b>T/C,S/B,T/T</b></span></th>
+					<th><span><b>T/C,S/B,T/T</b></span></th>
+					<th><span><b>Bank Note</b></span></th>
+				</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+					<th><span><img src="img/usd.png"> <b>USD</b></span></th>
+					<td><span>21,261</span></td>
+					<td><span>21,261</span></td>
+					<td><span>21,561</span></td>
+					<td><span>21,563</span></td>
+					</tr>
+
+					<tr>
+					<th><span><img src="img/thb.png"> <b>THB</b></span></th>
+					<td><span>673.03</span></td>
+					<td><span>673.03</span></td>
+					<td><span>684.13</span></td>
+					<td><span>684.13</span></td>
+					</tr>
+
+					<tr>
+					<th><span><img src="img/aud.png"> <b>AUD</b></span></th>
+					<td><span>13,864</span></td>
+					<td><span>13,864</span></td>
+					<td><span>14,555</span></td>
+					<td><span>14,557</span></td>
+					</tr>
+
+					<tr>
+					<th><span><img src="img/bnd.png"> <b>BND</b></span></th>
+					<td><span>12,559</span></td>
+					<td><span>12,559</span></td>
+					<td><span>13,185</span></td>
+					<td><span>13,187</span></td>
+					</tr>
+					
+					<tr>
+					<th><span><img src="img/cad.png"> <b>CAD</b></span></th>
+					<td><span>13,057</span></td>
+					<td><span>13,057</span></td>
+					<td><span>13,708</span></td>
+					<td><span>13,710</span></td>
+					</tr>
+
+					<tr>
+					<th><span><img src="img/chf.png"> <b>CHF</b></span></th>
+					<td><span>23,065</span></td>
+					<td><span>23,065</span></td>
+					<td><span>24,217</span></td>
+					<td><span>24,219</span></td>
+					</tr>
+
+					<tr>
+					<th><span><img src="img/cny.png"> <b>CNY</b></span></th>
+					<td><span>2,961</span></td>
+					<td><span>2,961</span></td>
+					<td><span>3,018</span></td>
+					<td><span>3,020</span></td>
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/dkk.png"> <b>DKK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<tr>
+					<th><span><img src="img/eur.png"> <b>EUR</b></span></th>
+					<td><span>23,711</span></td>
+					<td><span>23,711</span></td>
+					<td><span>24,184</span></td>
+					<td><span>24,186</span></td>
+					</tr>
+					
+					<tr>
+					<th><span><img src="img/gbp.png"> <b>GBP</b></span></th>
+					<td><span>27,924</span></td>
+					<td><span>27,924</span></td>
+					<td><span>28,481</span></td>
+					<td><span>28,483</span></td>
+					</tr>
+					
+					<tr>
+					<th><span><img src="img/hkd.png"> <b>HKD</b></span></th>
+					<td><span>2,315</span></td>
+					<td><span>2,315</span></td>
+					<td><span>2,428</span></td>
+					<td><span>2,430</span></td>
+					</tr>
+					
+					<tr>
+					<th><span><img src="img/jpy.png"> <b>JPY</b></span></th>
+					<td><span>135.00</span></td>
+					<td><span>135.00</span></td>
+					<td><span>137.50</span>
+					</td><td><span>137.70</span></td>
+					
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/nok.png"> <b>NOK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+
+					<tr>
+					<th><span><img src="img/nzd.png"> <b>NZD</b></span></th>
+					<td><span>9,544</span></td>
+					<td><span>9,544</span></td>
+					<td><span>10,019</span></td>
+					<td><span>10,021</span></td>
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/rub.png"> <b>RUB</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<!--
+					<tr>
+					<th><span><img src="img/sek.png"> <b>SEK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<tr>
+					<th><span><img src="img/sgd.png"> <b>SGD</b></span></th>
+					<td><span>14,315</span></td>
+					<td><span>14,315</span></td>
+					<td><span>15,029</span></td>
+					<td><span>15,031</span></td>
+					</tr>
+		
+					<tr>
+					<th><span><img src="img/vnd.png"> <b>VND</b></span></th>
+					<td><span>0.7576</span></td>
+					<td><span>0.7576</span></td>
+					<td><span>0.7935</span></td>
+					<td><span>0.7955</span></td>
+					</tr>
+				</tbody>
+			</table><table class="sticky-col"><thead>
+				<tr style="height: 40px;">
+					<th rowspan="2" style="width: 246px;">CURRENCY/KIP</th>
+					
+					
+
+				</tr>
+				<tr style="height: 40px;">
+					
+					
+					
+					
+				</tr>
+				</thead><tbody>
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/usd.png"> <b>USD</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/thb.png"> <b>THB</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/aud.png"> <b>AUD</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/bnd.png"> <b>BND</b></span></th>
+					
+					
+					
+					
+					</tr>
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/cad.png"> <b>CAD</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/chf.png"> <b>CHF</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/cny.png"> <b>CNY</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/dkk.png"> <b>DKK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/eur.png"> <b>EUR</b></span></th>
+					
+					
+					
+					
+					</tr>
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/gbp.png"> <b>GBP</b></span></th>
+					
+					
+					
+					
+					</tr>
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/hkd.png"> <b>HKD</b></span></th>
+					
+					
+					
+					
+					</tr>
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/jpy.png"> <b>JPY</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/nok.png"> <b>NOK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/nzd.png"> <b>NZD</b></span></th>
+					
+					
+					
+					
+					</tr>
+
+					<!--
+					<tr>
+					<th><span><img src="img/rub.png"> <b>RUB</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<!--
+					<tr>
+					<th><span><img src="img/sek.png"> <b>SEK</b></span></th>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					<td><span></span></td>
+					</tr>
+					-->
+					
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/sgd.png"> <b>SGD</b></span></th>
+					
+					
+					
+					
+					</tr>
+		
+					<tr style="height: 41px;">
+					<th style="width: 246px;"><span><img src="img/vnd.png"> <b>VND</b></span></th>
+					
+					
+					
+					
+					</tr>
+				</tbody></table><table class="sticky-intersectNOT-IN-USE"></table><table class="sticky-thead" style="width: 999px;"><thead>
+				<tr>
+					<th rowspan="2" style="width: 246px;">CURRENCY/KIP</th>
+					<th colspan="2" style="width: 376px;">BUYING RATES</th>
+					<th colspan="2" style="width: 376px;">SELLING RATES</th>
+
+				</tr>
+				<tr>
+					<th style="width: 185px;"><span><b>Bank Note</b></span></th>
+					<th style="width: 191px;"><span><b>T/C,S/B,T/T</b></span></th>
+					<th style="width: 191px;"><span><b>T/C,S/B,T/T</b></span></th>
+					<th style="width: 185px;"><span><b>Bank Note</b></span></th>
+				</tr>
+				</thead></table></div>
+		</div>
+			
+		</div><!-- /container -->
+
+	
+</body></html>

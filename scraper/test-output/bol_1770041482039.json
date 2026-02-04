@@ -1,0 +1,18 @@
+{
+  "scrapedAt": "2026-02-02T14:11:22.042Z",
+  "totalRates": 1,
+  "rates": [
+    {
+      "bankId": "BOL",
+      "bankName": "Bank of Laos",
+      "currencyPair": "THB/LAK",
+      "fromCurrency": "THB",
+      "toCurrency": "LAK",
+      "buyPrice": 675.85,
+      "sellPrice": 686.87,
+      "spread": 11.019999999999982,
+      "timestamp": 1770041480469,
+      "source": "https://bol.gov.la/ExchangRate.php"
+    }
+  ]
+}
