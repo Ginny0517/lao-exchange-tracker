@@ -12,6 +12,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { useHistoricalRates } from '@/lib/db';
+import type { HistoricalRate } from '@/lib/types';
 import { mockBanks } from '@/lib/mockData';
 
 interface TrendChartProps {
@@ -23,14 +24,15 @@ export default function TrendChart({
   currencyPair = 'USD/LAK',
   selectedBanks = [],
 }: TrendChartProps) {
-  // 從 InstantDB 獲取歷史數據
+  // 從 InstantDB 獲取歷史數據（型別斷言以符合 HistoricalRate 結構）
   const { historicalRates, isLoading } = useHistoricalRates();
+  const ratesList: HistoricalRate[] = historicalRates;
 
   const chartData = useMemo(() => {
     // 按日期分組數據
     const dataByDate = new Map<string, any>();
 
-    historicalRates
+    ratesList
       .filter((rate) => rate.currencyPair === currencyPair)
       .filter((rate) => selectedBanks.length === 0 || selectedBanks.includes(rate.bankId))
       .forEach((rate) => {
@@ -63,7 +65,7 @@ export default function TrendChart({
     });
 
     return result.sort((a, b) => a.date.localeCompare(b.date));
-  }, [historicalRates, currencyPair, selectedBanks]);
+  }, [ratesList, currencyPair, selectedBanks]);
 
   const colors = [
     '#2196F3', // Primary

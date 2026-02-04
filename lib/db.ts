@@ -1,6 +1,6 @@
 import { init } from "@instantdb/react";
 import { Schema } from "./schema";
-import type { CurrentRate } from "./types";
+import type { CurrentRate, HistoricalRate } from "./types";
 
 // 替換為您的 InstantDB App ID
 const APP_ID = process.env.NEXT_PUBLIC_INSTANT_APP_ID || "YOUR_APP_ID_HERE";
@@ -27,7 +27,14 @@ export const useCurrentRates = (): {
   };
 };
 
-export const useHistoricalRates = (bankId?: string, currencyPair?: string) => {
+export const useHistoricalRates = (
+  bankId?: string,
+  currencyPair?: string
+): {
+  isLoading: boolean;
+  error: Error | null;
+  historicalRates: HistoricalRate[];
+} => {
   const query = bankId && currencyPair
     ? {
         historicalRates: {
@@ -45,10 +52,13 @@ export const useHistoricalRates = (bankId?: string, currencyPair?: string) => {
 
   const { isLoading, error, data } = db.useQuery(query);
 
+  const rows = data?.historicalRates ?? [];
+  const historicalRates = Array.isArray(rows) ? (rows as HistoricalRate[]) : [];
+
   return {
     isLoading,
-    error,
-    historicalRates: data?.historicalRates || [],
+    error: error ?? null,
+    historicalRates,
   };
 };
 
