@@ -10,7 +10,7 @@ export const db = init<Schema>({ appId: APP_ID });
 // 查詢 hooks（明確回傳 CurrentRate[] 以符合元件型別）
 export const useCurrentRates = (): {
   isLoading: boolean;
-  error: Error | null;
+  error: any;
   currentRates: CurrentRate[];
 } => {
   const { isLoading, error, data } = db.useQuery({
@@ -22,7 +22,7 @@ export const useCurrentRates = (): {
 
   return {
     isLoading,
-    error: error ?? null,
+    error,
     currentRates,
   };
 };
@@ -32,7 +32,7 @@ export const useHistoricalRates = (
   currencyPair?: string
 ): {
   isLoading: boolean;
-  error: Error | null;
+  error: any;
   historicalRates: HistoricalRate[];
 } => {
   const query = bankId && currencyPair
@@ -57,14 +57,14 @@ export const useHistoricalRates = (
 
   return {
     isLoading,
-    error: error ?? null,
+    error,
     historicalRates,
   };
 };
 
 export const useBanks = (): {
   isLoading: boolean;
-  error: Error | null;
+  error: any;
   banks: Bank[];
 } => {
   const { isLoading, error, data } = db.useQuery({
@@ -80,14 +80,14 @@ export const useBanks = (): {
 
   return {
     isLoading,
-    error: error ?? null,
+    error,
     banks,
   };
 };
 
 export const useSupportedPairs = (): {
   isLoading: boolean;
-  error: Error | null;
+  error: any;
   pairs: SupportedPair[];
 } => {
   const { isLoading, error, data } = db.useQuery({
@@ -103,7 +103,7 @@ export const useSupportedPairs = (): {
 
   return {
     isLoading,
-    error: error ?? null,
+    error,
     pairs,
   };
 };
