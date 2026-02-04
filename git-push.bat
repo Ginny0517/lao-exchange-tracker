@@ -22,6 +22,6 @@ echo.
 set /p confirm="Commit and push? (y/n): "
 if /i not "%confirm%"=="y" exit /b 0
 
-git commit -m "fix: ExchangeTable type errors and db hook return type"
+git commit -m "fix: TypeScript type assertions for InstantDB queries and Vercel deployment"
 git push -u origin main 2>nul || git push -u origin master 2>nul || echo Please create branch 'main' or 'master' on GitHub and push again.
 pause

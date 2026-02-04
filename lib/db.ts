@@ -1,6 +1,6 @@
 import { init } from "@instantdb/react";
 import { Schema } from "./schema";
-import type { CurrentRate, HistoricalRate } from "./types";
+import type { CurrentRate, HistoricalRate, Bank, SupportedPair } from "./types";
 
 // 替換為您的 InstantDB App ID
 const APP_ID = process.env.NEXT_PUBLIC_INSTANT_APP_ID || "YOUR_APP_ID_HERE";
@@ -18,7 +18,7 @@ export const useCurrentRates = (): {
   });
 
   const rows = data?.currentRates ?? [];
-  const currentRates = Array.isArray(rows) ? (rows as CurrentRate[]) : [];
+  const currentRates = Array.isArray(rows) ? (rows as unknown as CurrentRate[]) : [];
 
   return {
     isLoading,
@@ -53,7 +53,7 @@ export const useHistoricalRates = (
   const { isLoading, error, data } = db.useQuery(query);
 
   const rows = data?.historicalRates ?? [];
-  const historicalRates = Array.isArray(rows) ? (rows as HistoricalRate[]) : [];
+  const historicalRates = Array.isArray(rows) ? (rows as unknown as HistoricalRate[]) : [];
 
   return {
     isLoading,
@@ -62,7 +62,11 @@ export const useHistoricalRates = (
   };
 };
 
-export const useBanks = () => {
+export const useBanks = (): {
+  isLoading: boolean;
+  error: Error | null;
+  banks: Bank[];
+} => {
   const { isLoading, error, data } = db.useQuery({
     banks: {
       $: {
@@ -71,14 +75,21 @@ export const useBanks = () => {
     },
   });
 
+  const rows = data?.banks ?? [];
+  const banks = Array.isArray(rows) ? (rows as unknown as Bank[]) : [];
+
   return {
     isLoading,
-    error,
-    banks: data?.banks || [],
+    error: error ?? null,
+    banks,
   };
 };
 
-export const useSupportedPairs = () => {
+export const useSupportedPairs = (): {
+  isLoading: boolean;
+  error: Error | null;
+  pairs: SupportedPair[];
+} => {
   const { isLoading, error, data } = db.useQuery({
     supportedPairs: {
       $: {
@@ -87,9 +98,12 @@ export const useSupportedPairs = () => {
     },
   });
 
+  const rows = data?.supportedPairs ?? [];
+  const pairs = Array.isArray(rows) ? (rows as unknown as SupportedPair[]) : [];
+
   return {
     isLoading,
-    error,
-    pairs: data?.supportedPairs || [],
+    error: error ?? null,
+    pairs,
   };
 };
